@@ -40,9 +40,22 @@ alias ohmyzsh="subl ~/.oh-my-zsh"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git brew autojump history)
+plugins=(git autojump history)
 
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
 export PATH=$PATH:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin
+export PYTHONPATH=/usr/local/lib/python2.7/site-packages
+
+export HOMEBREW_GITHUB_API_TOKEN=a5f3ae7ce103e2808a7a08d7390b84c4ec711469
+
+# For virtualenv
+export WORKON_HOME=~/.virtualenvs
+source /usr/local/bin/virtualenvwrapper.sh
+source ~/.autoenv/activate.sh
+
+alias ssh-config="subl ~/.ssh/config"
+alias temp="cd ~/temp/"
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
